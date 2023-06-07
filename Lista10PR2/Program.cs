@@ -69,12 +69,17 @@ namespace Lista10PR2
             {
                 Console.WriteLine("entre com um valor:");
                 vetor[i] = int.Parse(Console.ReadLine());
-
+                soma += vetor[i];
             }
+            media = soma / num;
+            Console.WriteLine("media: "+media);
 
             for (int i = 0; i < num; i++)
             {
-                Console.WriteLine("vetor[{0}]={1}", i, vetor[i]);
+                
+                    
+                if (vetor[i] >=media)
+                Console.WriteLine("numero maior ou igual a media vetor [{0}]={1}", i, vetor[i]);
             }
 
 
