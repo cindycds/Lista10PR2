@@ -132,10 +132,34 @@ namespace Lista10PR2
         }
             public static void Exercicio5()
             {
+            int par = 0, impar = 0;
+            Console.WriteLine("entre com o tamanho do seu vetor:");
+            int num = int.Parse(Console.ReadLine());
+            int[] vetor = new int[num];
+            Random random = new Random();
+            Console.Write("Numeros pares: ");
+            for (int i = 0; i < num; i++)
+            {
+                vetor[i] = random.Next(1, 50); //numeros aleatorios
+                if (vetor[i] % 2 == 0)
+                    Console.Write(", " + vetor[i]);
+
 
             }
+            Console.Write("\n numeros impares: ");
+            for (int i = 0; i < num; i++)
+            {
+                
+                if (vetor[i] % 2 != 0)
+                    Console.Write(", " + vetor[i]);
 
-            static void Main(string[] args)
+
+            }
+            Console.WriteLine();
+
+        }
+
+        static void Main(string[] args)
             {
                 int menuzin;
                 do
