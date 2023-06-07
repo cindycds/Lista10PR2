@@ -86,13 +86,50 @@ namespace Lista10PR2
         }
             public static void Exercicio3()
             {
-
+            float soma = 0, media = 0;
+            Console.WriteLine("entre com o tamanho do seu vetor:");
+            int num = int.Parse(Console.ReadLine());
+            float[] vetor = new float[num];
+            Random random = new Random();
+            for (int i = 0; i < num; i++)
+            {
+                vetor[i] = random.Next(1, 50); //mu,meros aleatorios
+                soma += vetor[i];
             }
-            public static void Exercicio4()
+            media = soma / num;
+            Console.WriteLine("media: " + media);
+
+            for (int i = 0; i < num; i++)
             {
 
 
+                if (vetor[i] >= media)
+                    Console.WriteLine("numero maior ou igual a media vetor [{0}]={1}", i, vetor[i]);
             }
+        }
+            public static void Exercicio4()
+            {
+           
+            Console.WriteLine("entre com o tamanho do seu vetor:");
+            int num = int.Parse(Console.ReadLine());
+            string[] vetor = new string[num];
+            for (int i = 0; i < num; i++)
+            {
+                Console.WriteLine("entre com os nomes:");
+                vetor[i] =Console.ReadLine();
+
+            }
+            for (int i = 0; i < num; i++)
+            {
+                Console.WriteLine("vetor[{0}]={1}", i, vetor[i]);
+            }
+
+            for (int i = num - 1; i >= 0; i--)
+            {
+                Console.WriteLine("vetor[{0}]={1}", i, vetor[i]);
+            }
+
+        }
             public static void Exercicio5()
             {
 
